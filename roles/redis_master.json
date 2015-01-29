@@ -1,0 +1,9 @@
+{
+  "name": "redis_master",
+  "description": "Runs redis master server",
+  "chef_type": "role",
+  "json_class": "Chef::Role",
+  "run_list": [
+    "recipe[redis::default]"
+  ]
+}

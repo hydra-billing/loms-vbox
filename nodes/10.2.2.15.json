@@ -1,0 +1,8 @@
+{
+  "run_list": [
+    "role[web]",
+    "role[application]",
+    "role[db_master]",
+    "role[redis_master]"
+  ]
+}

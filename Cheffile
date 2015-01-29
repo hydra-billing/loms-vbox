@@ -1,0 +1,15 @@
+#!/usr/bin/env ruby
+#^syntax detection
+
+site 'https://supermarket.getchef.com/api/v1'
+
+# cookbook 'chef-client'
+
+cookbook 'database', git: 'https://github.com/opscode-cookbooks/database.git'
+cookbook 'nginx'
+cookbook 'openssl'
+cookbook 'package_installer'
+cookbook 'postgresql'
+cookbook 'redis'
+cookbook 'rvm', git: 'https://github.com/fnichol/chef-rvm.git'
+

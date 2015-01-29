@@ -1,0 +1,37 @@
+{
+  "name": "development",
+  "description": "Development environment",
+  "chef_type": "environment",
+  "json_class": "Chef::Environment",
+  "default_attributes": {
+    "rvm": {
+      "installer_url": "https://raw.github.com/wayneeseguin/rvm/master/binscripts/rvm-installer",
+      "branch": "none",
+      "version": "1.25.28",
+      "rvmrc": {
+        "rvm_gemset_create_on_use_flag": 1
+      },
+      "user_installs": [{        
+        "user": "vagrant",
+        "default_ruby": "ruby-2.0.0-p353@global"
+      }]
+    },
+    "package_installer": {
+      "packages": {
+        "openssl": null,
+        "htop": null,
+        "libcurl4-openssl-dev": null,
+        "libaio1": null,
+        "ruby1.9.1-dev": null,
+        "nodejs": null,
+        "xvfb": null,
+        "xfonts-100dpi": null,
+        "xfonts-75dpi": null,
+        "xfonts-scalable": null,
+        "xfonts-cyrillic": null,
+        "xserver-xorg-core": null,
+        "libqtwebkit-dev": null
+      }
+    }
+  }
+}
