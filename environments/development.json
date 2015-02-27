@@ -30,6 +30,7 @@
         "xfonts-scalable": null,
         "xfonts-cyrillic": null,
         "xserver-xorg-core": null,
+        "imagemagick": null,
         "libqtwebkit-dev": null
       }
     }
