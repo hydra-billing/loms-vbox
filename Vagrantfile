@@ -1,7 +1,7 @@
 Vagrant.configure("2") do |config|
 
   boxes = {
-      "p4" => "10.2.2.15",
+      "zakaznitsa" => "10.2.2.14",
   }
 
   boxes.each do |box_name, box_ip|
@@ -10,21 +10,22 @@ Vagrant.configure("2") do |config|
       #config.vm.box_url = "./package.box" # some cookbooks applied
       config.vm.box = "trusty-64"
       config.vm.box_url = "https://cloud-images.ubuntu.com/vagrant/trusty/current/trusty-server-cloudimg-amd64-vagrant-disk1.box"
-      config.vm.hostname = "p4"
+      config.vm.hostname = "zakaznitsa"
       config.vm.network :private_network, ip: box_ip
       config.vm.network "forwarded_port", guest: 3000, host: 3000
       config.vm.network "forwarded_port", guest: 3001, host: 3001
       config.vm.network "forwarded_port", guest: 3002, host: 3002
+      config.vm.network "forwarded_port", guest: 3003, host: 3003
       
       config.vm.provider "virtualbox" do |vb|
         vb.gui = false
-        vb.name = "p4"
+        vb.name = "zakaznitsa"
       
         # Use VBoxManage to customize the VM. For example to change memory:
         vb.customize ["modifyvm", :id, "--memory", "1024"]
       end
 
-      config.vm.synced_folder "../", "/home/vagrant/my_src"
+      config.vm.synced_folder "..", "/home/vagrant/my_src/latera"
       config.ssh.forward_agent = true # to use host keys added to agent
 
       # provisioning
