@@ -2,11 +2,9 @@ vbox_p4
 =======
 
 Rails development VM environment vagrant and chef configs for
-the project [p4](https://github.com/Zloy/p4-site.git)
+the project [LOMS](https://github.com/latera/loms)
 
-It installs nginx, redis, postgresql and configures them.
-
-It expects RAILS application to be in ```../``` folder
+It installs nginx, postgresql, rvm, node.js
 
 It doesn't require any configuration to start RAILS application, 
 except of gem installation and database preparation. 
@@ -28,28 +26,16 @@ Check out application DB user and its password in `vbox/roles/db-master.json`, a
 
 ### Create a box
 
-Assume you got `my_src` folder and  there is `p4-site` folder inside it.
+Let's assume you got `my_src` folder
 
 ```
 cd my_src
-git clone git@github.com:Zloy/vbox_p4.git
+git clone git@github.com:latera/loms.git
 cd vbox_p4
 gem install librarian-chef
 librarian-chef install
 vagrant up
 vagrant ssh
-```
-
-### Setup the application
-
-Being logged in to the box, execute:
-
-```
-cd ~/p4-site
-bundle install
-
-bundle exec rake db:setup
-bundle exec rails s
 ```
 
 ## TODO
