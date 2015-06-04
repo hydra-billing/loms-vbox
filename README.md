@@ -6,8 +6,8 @@ the project [LOMS](https://github.com/latera/loms)
 
 It installs nginx, postgresql, rvm, node.js
 
-It doesn't require any configuration to start RAILS application, 
-except of gem installation and database preparation. 
+It doesn't require any configuration to start RAILS application,
+except of gem installation and database preparation.
 
 ## Prerequisites
 
@@ -22,7 +22,7 @@ These packages should be installed on Host machine
 
 ### Setup DB user an password
 
-Check out application DB user and its password in `vbox/roles/db-master.json`, and set them in `RAILS_ROOT/config/database.yml`, or change them in `vbox/roles/db-master.json` 
+Check out application DB user and its password in `vbox/roles/db-master.json`, and set them in `RAILS_ROOT/config/database.yml`, or change them in `vbox/roles/db-master.json`
 
 ### Create a box
 
@@ -43,6 +43,7 @@ vagrant ssh
 * add `apache2-utils` package
 * configure redis
 * configure nginx
+* set ~/.irbrc and ~/.irb_history
 
 ## Notes
 
